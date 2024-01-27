@@ -54,7 +54,9 @@ const Home = () => {
         <AcademicPortalnotifs 
           notifications={acadData?.notifications}
         />
-        <DSWNotifs />
+        <DSWNotifs 
+          notifications={DSWData?.notifications}
+        />
       </div>
     </>
   )

@@ -30,11 +30,9 @@ export async function scrapDSWSite() {
         // Parse the HTML using Cheerio
         const $ = cheerio.load(response.data);
         
-        const notification = $('[itemprop="articlebody"] > ol > li').map(function() {
+        const notification = $('.item-page li strong').map(function() {
             return $(this).text();
         }).get();
-
-        console.log(notification);
 
         const data = {
             notifications: notification,

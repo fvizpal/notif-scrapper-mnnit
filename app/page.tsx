@@ -37,18 +37,25 @@ const Home = () => {
 
   return (
     <>
-      <div className='flex content-center justify-center my-5'>
-        <h1> MNNIT Notification Compiler </h1>
-        <br />
-        <h3> All official MNNIT notifications at one place </h3>
+      <div className='flex flex-col items-center justify-center my-5'>
+        <h1 className="text-4xl font-bold mb-2">MNNIT Notification Compiler</h1>
+        <h3 className="text-lg">All official MNNIT notifications at one place</h3>
+        <h5 className="text-sm text-gray-600">Click the button below to fetch latest notifications</h5>
       </div>
-      <h5> Click the button below to fetch latest notifications </h5>
       <div className="flex align-top justify-center my-5">
             <Button className="refetch-btn" onClick={handleClick} disabled={loading}>
-                Fetch Notifications
+                {loading ? (
+                  <>
+                    Fetching...
+                  </>
+                ):
+                <>
+                  Fetch Notifications
+                </>}
             </Button>
+
       </div>
-      <div className='flex flex-row'>
+      <div className='flex flex-col space-x-4 sm:flex-row mx-4'>
         <HomepageNotifs 
           notifications={HomeData?.notifications}
         />

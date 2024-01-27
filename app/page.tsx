@@ -25,6 +25,7 @@ const Home = () => {
           const academicData = await scrapAcademicSite();
           setAcademicData(academicData);
           const dswData = await scrapDSWSite();
+          setDSWData(dswData)
           const homeData = await scrapHomeSite();
           setHomeData(homeData);
       } catch (error) {

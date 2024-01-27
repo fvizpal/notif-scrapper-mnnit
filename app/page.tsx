@@ -44,7 +44,7 @@ const Home = () => {
       </div>
       <h5> Click the button below to fetch latest notifications </h5>
       <div className="flex align-top justify-center my-5">
-            <Button className="refetch-btn" onClick={handleClick}>
+            <Button className="refetch-btn" onClick={handleClick} disabled={loading}>
                 Fetch Notifications
             </Button>
       </div>

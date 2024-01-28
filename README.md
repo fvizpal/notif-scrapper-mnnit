@@ -1,5 +1,5 @@
-#### Notifications Scrapper MNNIT
-## See all notifications on different pages of the official website at once
+# Notifications Scrapper MNNIT
+See all notifications on different pages of the official website at once
 
 
 ## Getting Started
